@@ -23,22 +23,7 @@ var addBinary = function(a, b) {
         i,
         j;
 
-    for (i = lenA - 1, j = lenB - 1; i >= 0 && j >= 0; i--, j --) {
-        charA = parseInt(a.charAt(i));
-        charB = parseInt(b.charAt(j));
-
-        curVal = charA + charB + overFlow;
-
-        if (curVal > 1) {
-            curVal = curVal - 2;
-            overFlow = 1;
-        } else {
-            overFlow = 0;
-        }
-        
-        result = curVal + result;
-    }
-
+   
     while (i >= 0) {
         charA = parseInt(a.charAt(i));
         curVal = charA + overFlow;
